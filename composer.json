@@ -6,7 +6,9 @@
             "email": "kaungkhant@gmail.com"
         }
     ],
-    "require": {},
+    "require": {
+        "fakerphp/faker": "^1.15"
+    },
     "autoload": {
         "psr-4": {
         "Libs\\": "_classes/Libs/",
