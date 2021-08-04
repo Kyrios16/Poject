@@ -13,7 +13,7 @@ $table = new UsersTable (new MySQL());
 if($table) {
     echo "Database connection opened.\n";
 
-    for ($i=0; $i<10: $i++) {
+    for ($i=0; $i<10; $i++) {
         $data = [
             'name' => $faker->name,
             'email'=> $faker->email,
