@@ -1,6 +1,5 @@
 <?php
- declare(strict_types=1);
-
+ 
  namespace Libs\Database;
 
  use PDO;
@@ -8,6 +7,25 @@
 
  class MySQL 
  {
+    // sir ei maung's example codes
+    // private $dbhost;
+    // private $dbuser;
+    // private $dbname;
+    // private $dbpass;
+    // private $db;
+
+    // public function __construct(
+    //     $dbhost = "localhost",
+    //     $dbuser = "root",
+    //     $dbname = "project",
+    //     $dbpass = "",
+    // ){
+    //     $this->dbhost = $dbhost;
+    //     $this->dbuser = $dbuser;
+    //     $this->dbname = $dbname;
+    //     $this->dbpass = $dbpass;
+    //     $this->db = null;
+    // }
 
     //owntune php 8 property promotion
      public function __construct(
@@ -22,7 +40,7 @@
      {
          try {
              $this->db =new PDO(
-                 'mysql:dbhost=$this->dbhost;dbname=$this->dbname',
+                 'mysql:host=$this->dbhost;name=$this->dbname',
                  $this->dbuser,
                  $this->dbpass,
                  [
