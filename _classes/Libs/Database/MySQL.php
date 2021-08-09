@@ -7,7 +7,7 @@
 
  class MySQL 
  {
-    // sir ei maung's example codes
+    // // sir ei maung's example codes
     // private $dbhost;
     // private $dbuser;
     // private $dbname;
@@ -33,14 +33,14 @@
         private $dbuser = 'root',
         private $dbname = 'project',
         private $dbpass = '',
-        private $db = null,
+        private $db = null, //database connection close chin tae atwat
      ){}
 
      public function connect ()
      {
          try {
              $this->db =new PDO(
-                 'mysql:host=$this->dbhost;name=$this->dbname',
+                 "mysql:host=$this->dbhost;dbname=$this->dbname",
                  $this->dbuser,
                  $this->dbpass,
                  [
