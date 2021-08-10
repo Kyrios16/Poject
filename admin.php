@@ -64,26 +64,26 @@
                     </td>
                     <td>
                         <?php if($auth->value > 1): ?>
-                            <div class="btn-group dropdonw">
+                            <div class="btn-group dropdown">
                                 <a href="#" class="btn btn-sm btn-outline-primary dropdown-toggle" data-bs-toggle="dropdown">
                                     Change Role
                                 </a>
                                 <div class="dropdown-menu dropdown-menu-dark">
-                                <a href="_actions/role.php?id=<?= $user->id ?>&role=1"class="dropdown-item">
-                                    User
-                                </a>
-                                <a href="_actions/role.php?id=<?= $user->id ?>&role=2"class="dropdown-item">
-                                    Manager
-                                </a>
-                                <a href="_actions/role.php?id=<?= $user->id ?>&role=3"class="dropdown-item">
-                                    Admin
-                                </a>
+                                    <a href="_actions/role.php?id=<?= $user->id ?>&role=1" class="dropdown-item">
+                                        User
+                                    </a>
+                                    <a href="_actions/role.php?id=<?= $user->id ?>&role=2" class="dropdown-item">
+                                        Manager
+                                    </a>
+                                    <a href="_actions/role.php?id=<?= $user->id ?>&role=3" class="dropdown-item">
+                                        Admin
+                                    </a>
                                 </div>
-                                <?php if($user->suspened): ?>
+                                <?php if($user->suspended): ?>
                                     <a href="_actions/unsuspend.php?id=<?= $user->id ?>" 
                                     class="btn btn-sm btn-danger">Suspended</a>
                                 <?php else: ?>
-                                    <a href="_actions/unsuspend.php?id=<?= $user->id ?>" 
+                                    <a href="_actions/suspend.php?id=<?= $user->id ?>" 
                                     class="btn btn-sm btn-outline-success">Active</a>
                                 <?php endif ?>
 
